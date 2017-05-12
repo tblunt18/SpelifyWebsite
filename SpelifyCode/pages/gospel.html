@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Gospel</title>
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize.css" media="screen,projection"/>
+    <!--Import our own css file-->
+    <link type="text/css" rel="stylesheet" href="SpelifyStyle.css" media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize.js"></script>
+
+    <style>
+        html {
+
+            height: 100%;
+            width: 100%;
+            left:0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+            background-size: 1800% 1800%;
+
+            -webkit-animation: rainbow 18s ease infinite;
+            -z-animation: rainbow 18s ease infinite;
+            -o-animation: rainbow 18s ease infinite;
+            animation: rainbow 18s ease infinite;}
+
+        @-webkit-keyframes rainbow {
+            0%{background-position:0% 82%}
+            50%{background-position:100% 19%}
+            100%{background-position:0% 82%}
+        }
+        @-moz-keyframes rainbow {
+            0%{background-position:0% 82%}
+            50%{background-position:100% 19%}
+            100%{background-position:0% 82%}
+        }
+        @-o-keyframes rainbow {
+            0%{background-position:0% 82%}
+            50%{background-position:100% 19%}
+            100%{background-position:0% 82%}
+        }
+        @keyframes rainbow {
+            0%{background-position:0% 82%}
+            50%{background-position:100% 19%}
+            100%{background-position:0% 82%}
+
+        }
+        audio
+        {
+            -webkit-transition:all 0.5s linear;
+            -moz-transition:all 0.5s linear;
+            -o-transition:all 0.5s linear;
+            transition:all 0.5s linear;
+            -moz-box-shadow: 2px 2px 4px 0px #006773;
+            -webkit-box-shadow:  2px 2px 4px 0px #006773;
+            box-shadow: 2px 2px 4px 0px #006773;
+            -moz-border-radius:7px 7px 7px 7px ;
+            -webkit-border-radius:7px 7px 7px 7px ;
+            border-radius:7px 7px 7px 7px ;
+        }
+        audio:hover, audio:focus, audio:active
+        {
+            -webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+            -moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+            box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+            -webkit-transform: scale(1.05);
+            -moz-transform: scale(1.05);
+            transform: scale(1.05);
+        }
+        img:hover, audio:focus, audio:active
+        {
+            -webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+            -moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+            box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+            -webkit-transform: scale(1.05);
+            -moz-transform: scale(1.05);
+            transform: scale(1.05);
+        }
+    </style>
+
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-wrapper white">
+        <a href="#" class="brand-logo center"><img style="height: 60px" id="logo" src="../images/logo2.png"/></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="cyan lighten-5" href="#">Welcome</a></li>
+        </ul>
+        <!-- search form inside nav bar -->
+        <form onsubmit="Search(); return false">
+            <div class="input-field right-align ">
+                <input style="font-family: 'Apple Chancery'" id="search5" type="search" required >
+                <label class="label-icon" for="search5"><i class="material-icons cyan lighten-5" >search</i></label>
+                <i class="material-icons">close</i>
+            </div>
+        </form>
+
+    </div>
+</nav>
+
+<div class="row">
+    <div class="col s6">
+        <p id="demo5" style="color: black; size: 400px;font-family: 'Apple Chancery'"></p>
+    </div>
+
+</div>
+
+<div class="row center-align ">
+    <h5 style="font-family: 'Apple Chancery'" class="light grey-text text-lighten-3"><span class="black-box z-depth-5" style="font-size: 40px;margin-top: 20px;font-family: 'Apple Chancery'">Let The Lord Be With You</span></h5>
+    <div class="carousel">
+
+        <a class="carousel-item" href="#one!"><img id="g_img1" class="play_music" style="height: 240px;width:300px" src="../images/sometimes.png"/>
+            <div class="caption center-align">
+                <div id="g_aud1" class="hide-all">
+
+                </div>
+                <h5 style="font-family: 'Apple Chancery'" class="light grey-text text-lighten-3"><span class="black-box" style="font-family: 'Apple Chancery'">Sometimes</span></h5>
+            </div>
+        </a>
+
+        <a class="carousel-item" href="#two!"><img id="g_img2" style="height: 240px;width:300px" src="../images/victory.jpeg"/>
+            <div class="caption center-align">
+                <div id="g_aud2" class="hide-all">
+
+                </div>
+                <h5 style="font-family: 'Apple Chancery'" class="light grey-text text-lighten-3"><span class="black-box" style="font-family: 'Apple Chancery'">Victory</span></h5>
+            </div>
+        </a>
+
+        <a class="carousel-item" href="#three!"><img id="g_img3" style="height: 240px;width:300px" src="../images/blessedredeemer.jpeg"/>
+            <div class="caption center-align">
+                <div id="g_aud3" class="hide-all">
+
+                </div>
+                <h5 style="font-family: 'Apple Chancery'" class="light grey-text text-lighten-3"><span class="black-box" style="font-family: 'Apple Chancery'">Blessed Redeemer</span></h5>
+            </div>
+        </a>
+
+        <a class="carousel-item" href="#four!"><img id="g_img4" style="height: 240px;width:300px" src="../images/givehimcredit.jpeg"/>
+            <div class="caption center-align">
+                <div id="g_aud4" class="hide-all">
+
+                </div>
+                <h5 style="font-family: 'Apple Chancery'" class="light grey-text text-lighten-3"><span class="black-box" style="font-family: 'Apple Chancery'">Give Him The Credit</span></h5>
+            </div>
+        </a>
+
+        <a class="carousel-item" href="#five!"><img id="g_img5" style="height: 240px;width:300px" src="../images/holysong.jpeg"/>
+            <div class="caption center-align">
+                <div id="g_aud5" class="hide-all">
+
+                </div>
+                <h5 style="font-family: 'Apple Chancery'" class="light grey-text text-lighten-3"><span class="black-box" style="font-family: 'Apple Chancery'">Holy Song</span></h5>
+            </div>
+        </a>
+
+        <a class="carousel-item" href="#six!"><img id="g_img6" class="play_music" style="height: 240px;width:300px" src="../images/foryourglory.jpeg"/>
+            <div class="caption center-align">
+                <div id="g_aud6" class="hide-all">
+
+                </div>
+                <h5 style="font-family: 'Apple Chancery'" class="light grey-text text-lighten-3"><span class="black-box" style="font-family: 'Apple Chancery'">For Your Glory</span></h5>
+            </div>
+        </a>
+
+        <a class="carousel-item" href="#seven!"><img id="g_img7" class="play_music" style="height: 240px;width:300px" src="../images/hekeepsmesinging.jpeg"/>
+            <div class="caption center-align">
+                <div id="g_aud7" class="hide-all">
+
+                </div>
+                <h5 style="font-family: 'Apple Chancery'" class="light grey-text text-lighten-3"><span class="black-box" style="font-family: 'Apple Chancery'">He Keeps Me Singing</span></h5>
+            </div>
+        </a>
+
+        <a class="carousel-item" href="#eight!"><img id="g_img8" class="play_music" style="height: 240px;width:300px" src="../images/youreincredible.jpeg"/>
+            <div class="caption center-align">
+                <div id="g_aud8" class="hide-all">
+
+                </div>
+                <h5 style="font-family: 'Apple Chancery'" class="light grey-text text-lighten-3"><span class="black-box" style="font-family: 'Apple Chancery'">You're Incredible</span></h5>
+            </div>
+        </a>
+
+
+
+    </div>
+</div>
+
+<!--Materializecss Slider-->
+<script>
+    $(document).ready(function () {
+        $('.carousel').carousel();
+
+        $('#g_img1').click(function(){
+            $(".hide-all").html("");
+            $('#g_aud1').append('<audio  controls style=" background: none; width:300px"> <source src="music/m_gospel/Sometimes.mp3" type="audio/mpeg"> </audio>');
+        });
+        $('#g_img2').click(function(){
+            $(".hide-all").html("");
+            $('#g_aud2').append('<audio  controls style=" background: none; width:300px"> <source src="music/m_gospel/Victory.mp3" type="audio/mpeg"> </audio>');
+        });
+        $('#g_img3').click(function(){
+            $(".hide-all").html("");
+            $('#g_aud3').append('<audio  controls style=" background: none; width:300px"> <source src="music/m_gospel/Blessed Redeemer.mp3" type="audio/mpeg"> </audio>');
+        });
+        $('#g_img4').click(function(){
+            $(".hide-all").html("");
+            $('#g_aud4').append('<audio  controls style=" background: none; width:300px"> <source src="music/m_gospel/Give Him The Credit 1.mp3" type="audio/mpeg"> </audio>');
+        });
+        $('#g_img5').click(function(){
+            $(".hide-all").html("");
+            $('#g_aud5').append('<audio  controls style=" background: none; width:300px"> <source src="music/m_gospel/Holy Song.mp3" type="audio/mpeg"> </audio>');
+        });
+        $('#g_img6').click(function(){
+            $(".hide-all").html("");
+            $('#g_aud6').append('<audio  controls style=" background: none; width:300px"> <source src="music/m_gospel/For Your Glory.mp3" type="audio/mpeg"> </audio>');
+        });
+        $('#g_img7').click(function(){
+            $(".hide-all").html("");
+            $('#g_aud7').append('<audio  controls style=" background: none; width:300px"> <source src="music/m_gospel/He Keeps Me Singing.mp3" type="audio/mpeg"> </audio>');
+        });
+        $('#g_img8').click(function(){
+            $(".hide-all").html("");
+            $('#g_aud8').append('<audio  controls style=" background: none; width:300px"> <source src="music/m_gospel/You&#39;re Incredible God.mp3" type="audio/mpeg"> </audio>');
+        });
+
+
+
+
+
+    });
+</script>
+<!-- search bar functionality -->
+<script>
+    function Search() {
+        var input = document.getElementById("search5");
+        if (input.value === "jazz") {
+            location.href="jazz.html";
+        }
+        else if(input.value === "hiphop") {
+            location.href="hiphop.html";
+        }
+        else if(input.value === "gospel") {
+            location.href="gospel.html";
+        }
+        else if(input.value === "pop") {
+            location.href="pop.html";
+        }
+        else {
+            var error="Invalid input. Search for following genre: hiphop, gospel, jazz, or pop";
+            document.getElementById("demo5").innerHTML = error;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize.css" media="screen,projection"/>
+        <!--Import our own css file-->
+        <link type="text/css" rel="stylesheet" href="SpelifyStyle.css" media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="materialize.js"></script>
+
+        <style>
+            html {
+
+                height: 100%;
+                width: 100%;
+                left:0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                position: absolute;
+                background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+                background-size: 1800% 1800%;
+
+                -webkit-animation: rainbow 18s ease infinite;
+                -z-animation: rainbow 18s ease infinite;
+                -o-animation: rainbow 18s ease infinite;
+                animation: rainbow 18s ease infinite;}
+
+            @-webkit-keyframes rainbow {
+                0%{background-position:0% 82%}
+                50%{background-position:100% 19%}
+                100%{background-position:0% 82%}
+            }
+            @-moz-keyframes rainbow {
+                0%{background-position:0% 82%}
+                50%{background-position:100% 19%}
+                100%{background-position:0% 82%}
+            }
+            @-o-keyframes rainbow {
+                0%{background-position:0% 82%}
+                50%{background-position:100% 19%}
+                100%{background-position:0% 82%}
+            }
+            @keyframes rainbow {
+                0%{background-position:0% 82%}
+                50%{background-position:100% 19%}
+                100%{background-position:0% 82%}
+
+            }
+        </style>
+    </head>
+    <body>
+
+    <!-- Nav bar with logo -->
+    <nav>
+        <div class="nav-wrapper white">
+            <a href="#" class="brand-logo center"><img class="responsive-img"style="height: 56px" id="logo" src="../images/logo2.png"/></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="cyan lighten-5" href="#">Welcome</a></li>
+
+            </ul>
+
+            <!-- search form inside nav bar -->
+            <form onsubmit="Search(); return false">
+                <div class="input-field right-align ">
+                    <input  id="search" type="search" required >
+                    <label class="label-icon" for="search"><i class="material-icons cyan lighten-5" >search</i></label>
+                    <i class="material-icons">close</i>
+                </div>
+            </form>
+
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col s12">
+            <div class="z-depth-2" style="background-color: rgba(255,64,153,0.3);  opacity:4; height:60px; color:white;" >
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row center-aligned">
+        <div class="col s12">
+            <div  >
+                <p id="demo" style="color: black; size: 400px"></p>
+
+            </div>
+            <div class="z-depth-3" style="background-color: rgba(156,255,233,0.3);  opacity:4; height:400px; color:white; " >
+                <div class="col s12 center-align ">
+                    <h3 style="font-family: 'Apple Chancery';font-size: 50px;display: block; height: 25px; text-align:center; line-height:300px;">Quench that Music Thirst</h3>
+                    <h5 style="display: block; height: 25px; text-align:center; line-height:300px;">Pick a genre below</h5>
+                </div>
+
+                <div class="row">
+                    <div class="col s6 offset-s10">
+                        <button onClick="info()"; class="btn btn-floating pulse pink lighten-3 offset-s4" style=" "><i class="material-icons">info_outline</i></button>
+                        <p>Learn More</p>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 container">
+                            <p id="info" style="display: block; height: 25px; text-align:center; line-height:200px;"> </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- list of liked songs collection?
+    <ul class="collection">
+        <li class="collection-item">Alvin</li>
+        <li class="collection-item">Alvin</li>
+        <li class="collection-item">Alvin</li>
+        <li class="collection-item">Alvin</li>
+    </ul>
+    -->
+    <div class="row">
+        <div class="col s12">
+            <div class="z-depth-2" style="background-color: rgba(230,255,11,0.3);  opacity:4; height:60px; color:white;" >
+
+
+            </div>
+        </div>
+    </div>
+    <!-- home page slider element with 4 genres -->
+    <div class="row center-aligned">
+
+        <div class="col s12 " >
+            <div class="z-depth-3" style="background-color: rgba(156,255,233,0.3);  opacity:4; height:460px; color:white;"  >
+                <div class="row ">
+                    <div class="col s6 offset-s3">
+                         <!-- notice the "circle" class -->
+
+                        <div class="slider" style="width:100%;">
+                            <ul class="slides circle">
+                                <li>
+                                    <a href="jazz.html"><img src="../images/jazz.jpg" class="circle responsive-img" ></a>
+                                    <div class="caption center-align">
+                                        <h3>Electric Jazz</h3>
+                                        <h5 class="light grey-text text-lighten-3"><span class="black-box">Enter a world of smooth sound.</span></h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="hiphop.html"><img src="../images/hiphop.jpg" class="circle responsive-img"></a> <!-- random image -->
+                                    <div class="caption left-align">
+                                        <h3>Hip Hop</h3>
+                                        <h5 class="light grey-text text-lighten-3" ><span class="black-box">Bop to the beat.</span></h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="pop.html"><img src="../images/pop.jpg" class="circle responsive-img"></a> <!-- random image -->
+                                    <div class="caption right-align">
+                                        <h3>Pop</h3>
+                                        <h5 class="light grey-text text-lighten-3"><span class="black-box">You know why we're here.</span></h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="gospel.html"><img src="../images/gospel.jpg" class="circle responsive-img"> </a><!-- random image -->
+                                    <div class="caption center-align">
+                                        <h3>The Gospel</h3>
+                                        <h5 class="light grey-text text-lighten-3"><span class="black-box">Uplifting and love</span></h5>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    <!-- slide show of each of the 4 Genres -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="col s12 ">`
+        <div class="z-depth-3" style="background-color: rgba(67,160,255,0.3);  opacity:4; height:60px; color:white;">
+
+        </div>
+    </div>
+    </div>
+
+
+
+    <!--Materializecss Slider-->
+    <script>
+        $(document).ready(function () {
+            $('.slider').slider({full_width: true});
+        });
+    </script>
+
+    <script>
+        function Search() {
+            var input = document.getElementById("search");
+            if (input.value === "jazz") {
+                location.href="jazz.html";
+            }
+            else if(input.value === "hiphop") {
+                location.href="hiphop.html";
+            }
+            else if(input.value === "gospel") {
+                location.href="gospel.html";
+            }
+            else if(input.value === "pop") {
+                location.href="pop.html";
+            }
+            else {
+                var error= "Invalid input. Search for following genre: hiphop, gospel, jazz, or pop";
+                document.getElementById("demo").innerHTML = error;
+            }
+        }
+        function info(){
+            var information = "Spelify provides a seamless music streaming experience for all types of users. " +
+                "Binge your favorite genres with no limit and discover new artists and songs when " +
+                "you enter a genre :) ";
+            document.getElementById("info").innerHTML = information;
+        }
+    </script>
+    </body>
+</html>
